@@ -21,13 +21,13 @@ class CommentForm(FlaskForm):
 # CONFIGURE FORMS
 
 class RegisterForm(FlaskForm):
-    email = StringField(label="Email", validators=[DataRequired(), Email()])
+    email = StringField(label="Email", validators=[DataRequired()])
     password = PasswordField(label="Password", validators=[DataRequired(), Length(min=8)])
     name = StringField(label="Name", validators=[DataRequired(), Length(min=3)])
     submit = SubmitField(label="Register")
 
 
 class LoginForm(FlaskForm):
-    email = StringField(label="Email", validators=[DataRequired(), Email()])
+    email = StringField(label="Email", validators=[DataRequired()])
     password = PasswordField(label="Password", validators=[DataRequired(), Length(min=8)])
     submit = SubmitField(label="Let Me In")
